@@ -7,7 +7,8 @@ const Layout = ({ children, metaDesc }) => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content={metaDesc} />
       </Head>
-      <header className="w-full h-16 bg-white/70"></header>
+      <header className="w-full h-16 bg-white/70 fixed top-0"></header>
+      <main className="w-full h-full py-16">{children}</main>
       <footer className="w-full h-16 bg-white/70 fixed bottom-0"></footer>
     </div>
   );
