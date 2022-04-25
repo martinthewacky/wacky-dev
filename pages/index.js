@@ -1,9 +1,11 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
 
+export const siteLocation = "Home";
+
 export default function Home() {
   return (
-    <Layout>
+    <Layout home>
       <Head>
         <title>Wacky Dev: The Home of The Wackiest Dev Alive</title>
         <meta
@@ -11,7 +13,7 @@ export default function Home() {
           content="The home of Wacky Dev welcomes you with unbelievable gratitude."
         />
       </Head>
-      <div className="w-full h-full overflow-y-scroll">
+      <div className="w-full">
         <section className="w-full px-5">
           <h1 className="text-6xl font-extrabold text-center">WELCOME</h1>
           <br />
