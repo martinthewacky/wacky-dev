@@ -4,17 +4,17 @@ import MenuAlt4Icon from "@heroicons/react/solid/MenuAlt4Icon";
 import MoonIcon from "@heroicons/react/solid/MoonIcon";
 import SunIcon from "@heroicons/react/solid/SunIcon";
 import Link from "next/link";
+import Modal from "../Modal";
 
 const Layout = ({ children, home }) => {
-  const [navMenu, setNavMenu] = useState(true);
+  const [navMenu, setNavMenu] = useState(false);
   const showNavMenu = () => {
     setNavMenu(true);
-    console.log("Nav menu opened");
   };
   const hideNavMenu = () => {
     setNavMenu(false);
-    console.log("Nav menu closed");
   };
+  let navMenuActive = navMenu ? "opacity-0" : "opacity-100";
   return (
     <div className="w-full text-neutral-800">
       <Head>
@@ -41,13 +41,14 @@ const Layout = ({ children, home }) => {
               </Link>
             )}
           </div>
-          <div className="">
+          <div className="relative">
             <button
-              className="p-4 flex justify-center items-center rounded-xl hover:bg-neutral-800/10"
+              className={`p-4 ${navMenuActive} justify-center items-center rounded-xl hover:bg-neutral-800/10`}
               onClick={showNavMenu}
             >
               <MenuAlt4Icon width="24" height="24" />
             </button>
+            <Modal show={navMenu} closeFunc={hideNavMenu} />
           </div>
         </div>
       </header>
@@ -56,6 +57,7 @@ const Layout = ({ children, home }) => {
       <style global jsx>{`
         * {
           transition: 0.4s ease;
+          box-sizing: border-box;
         }
       `}</style>
     </div>
