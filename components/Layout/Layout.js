@@ -5,7 +5,6 @@ const Layout = ({ children, metaDesc }) => {
     <div className="w-full h-screen">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content={metaDesc} />
       </Head>
       <header className="w-full h-16 bg-white/70 fixed top-0"></header>
       <main className="w-full h-full py-16">{children}</main>
