@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const Layout = ({ children, metaDesc }) => {
+const Layout = ({ children }) => {
   return (
     <div className="w-full h-screen">
       <Head>
