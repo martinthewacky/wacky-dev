@@ -48,12 +48,12 @@ const Layout = ({ children, home }) => {
             >
               <MenuAlt4Icon width="24" height="24" />
             </button>
-            <Modal show={navMenu} closeFunc={hideNavMenu} />
           </div>
         </div>
       </header>
       <main className="w-full pb-16">{children}</main>
       <footer className="w-full h-16 px-3 border-t border-t-neutral-400"></footer>
+      <Modal show={navMenu} closeFunc={hideNavMenu} />
       <style global jsx>{`
         * {
           transition: 0.4s ease;
