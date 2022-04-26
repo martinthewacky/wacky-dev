@@ -7,7 +7,7 @@ const Modal = (props) => {
     <div className={`${displayMethod} ${animation} absolute top-full w-full`}>
       <div className="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center">
         <div
-          className="w-full h-full bg-neutral-800/80 backdrop-blur absolute"
+          className="w-full h-full bg-neutral-800/80 absolute"
           onClick={props.closeFunc}
         ></div>
         <div className="w-full max-w-lg p-3 flex justify-center items-center relative">
@@ -41,7 +41,7 @@ const Modal = (props) => {
           }
         }
         .animate-fade-in {
-          animation: fadeIn 0.2s ease-in;
+          animation: fadeIn 0.2s ease;
         }
         .animate-fade-out {
           animation: fadeOut 0.4s ease;
