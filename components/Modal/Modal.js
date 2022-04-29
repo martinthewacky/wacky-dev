@@ -10,8 +10,20 @@ const Modal = (props) => {
           className="w-full h-full bg-neutral-800/80 absolute"
           onClick={props.closeFunc}
         ></div>
-        <div className="w-full h-full max-w-lg p-3 flex justify-center items-center">
-          <div className="w-full h-full py-5 px-3 rounded-xl border border-neutral-400 bg-white relative">
+        <div className="w-full h-full max-w-xs absolute top-0 right-0">
+          <div className="w-full h-full rounded-none border-l bg-white">
+            <header className="w-full h-12 px-3 border-b">
+              <div className="w-full h-full flex justify-between items-center">
+                <h5 className="capitalize font-mono text-xl font-bold">
+                  {props.modalHeading}
+                </h5>
+                <div className="relative">
+                  <button className="p-3 justify-center items-center rounded-none hover:bg-neutral-800/10">
+                    <XIcon width="24" height="24" />
+                  </button>
+                </div>
+              </div>
+            </header>
             <div className="p-2 absolute top-0 right-0">
               <button
                 className="p-4 flex justify-center items-center gap-1 rounded-xl text-neutral-800 hover:bg-neutral-800/10"
