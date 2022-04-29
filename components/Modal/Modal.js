@@ -18,7 +18,12 @@ const Modal = (props) => {
                   {props.modalHeading}
                 </h5>
                 <div className="relative">
-                  <button className="p-3 justify-center items-center rounded-none hover:bg-neutral-800/10">
+                  <button
+                    className="p-3 justify-center items-center rounded-none hover:bg-neutral-800/10"
+                    title="Close"
+                    aria-label="Close Navigation Modal"
+                    onClick={props.closeFunc}
+                  >
                     <XIcon width="24" height="24" />
                   </button>
                 </div>
