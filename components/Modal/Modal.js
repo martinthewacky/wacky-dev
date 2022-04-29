@@ -10,17 +10,18 @@ const Modal = (props) => {
           className="w-full h-full bg-neutral-800/80 absolute"
           onClick={props.closeFunc}
         ></div>
-        <div className="w-full max-w-lg p-3 flex justify-center items-center relative">
-          <div className="px-3 absolute bottom-full right-0">
-            <button
-              className="p-4 flex justify-center items-center rounded-xl text-white hover:bg-neutral-800/50"
-              title="Close Modal"
-              onClick={props.closeFunc}
-            >
-              <XIcon width="24" height="24" />
-            </button>
-          </div>
-          <div className="w-full py-5 px-3 rounded-xl border border-neutral-400 bg-white">
+        <div className="w-full h-full max-w-lg p-3 flex justify-center items-center">
+          <div className="w-full h-full py-5 px-3 rounded-xl border border-neutral-400 bg-white relative">
+            <div className="p-2 absolute top-0 right-0">
+              <button
+                className="p-4 flex justify-center items-center gap-1 rounded-xl text-neutral-800 hover:bg-neutral-800/10"
+                title="Close Modal"
+                onClick={props.closeFunc}
+              >
+                <XIcon width="24" height="24" />
+                <span className="">Close</span>
+              </button>
+            </div>
             {props.children}
           </div>
         </div>
