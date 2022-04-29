@@ -7,7 +7,8 @@ module.exports = {
     extend: {},
     fontFamily: {
       display: "Lobster",
+      mono: "Cascadia Code",
     },
   },
   plugins: [],
-}
+};
