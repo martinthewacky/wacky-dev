@@ -5,7 +5,7 @@ const Modal = (props) => {
   let animation = props.show ? "animate-fade-in" : "animate-fade-out";
   return (
     <div className={`${displayMethod} ${animation} absolute top-full w-full`}>
-      <div className="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center">
+      <div className="fixed inset-0 flex justify-center items-center">
         <div
           className="w-full h-full bg-neutral-800/80 absolute"
           onClick={props.closeFunc}
