@@ -20,7 +20,7 @@ const Layout = ({ children, home }) => {
       <Head>
         <link rel="icon" href="/wacky-dev-logo.svg" />
       </Head>
-      <header className="w-full h-16 px-3 border-b border-b-neutral-400 bg-white/80 sticky top-0 backdrop-blur">
+      <header className="w-full h-12 px-3 border-b bg-white/80 sticky top-0 backdrop-blur">
         <div className="w-full h-full flex justify-between items-center">
           <div className="">
             {home ? (
@@ -43,7 +43,7 @@ const Layout = ({ children, home }) => {
           </div>
           <div className="relative">
             <button
-              className={`p-4 ${navMenuActive} justify-center items-center rounded-xl hover:bg-neutral-800/10`}
+              className={`p-3 ${navMenuActive} justify-center items-center rounded-none hover:bg-neutral-800/10`}
               onClick={showNavMenu}
             >
               <MenuAlt4Icon width="24" height="24" />
