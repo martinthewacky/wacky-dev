@@ -1,4 +1,5 @@
 import XIcon from "@heroicons/react/outline/XIcon";
+import SunIcon from "@heroicons/react/outline/SunIcon";
 
 const Modal = (props) => {
   let displayMethod = props.show ? "" : "hidden";
@@ -8,13 +9,13 @@ const Modal = (props) => {
     <div className={`${displayMethod} ${animation} absolute top-full w-full`}>
       <div className="fixed inset-0 flex justify-center items-center">
         <div
-          className="w-full h-full bg-neutral-800/80 absolute"
+          className="w-full h-full bg-neutral-800/50 absolute"
           onClick={props.closeFunc}
         ></div>
         <div
           className={`w-full h-full max-w-xs absolute top-0 right-0 ${modalAnimation}`}
         >
-          <div className="w-full h-full rounded-none border-l bg-white relative">
+          <div className="w-full h-full rounded-none border-l bg-white/80 backdrop-blur-sm relative">
             <header className="w-full h-12 px-3 border-b absolute top-0">
               <div className="w-full h-full flex justify-between items-center">
                 <h5 className="capitalize font-mono text-xl font-bold">
@@ -34,7 +35,17 @@ const Modal = (props) => {
             </header>
             <main className="w-full h-full px-3 py-12">{props.children}</main>
             <footer className="w-full h-12 px-3 border-t absolute bottom-0">
-              <div className="w-full h-full flex justify-between items-center"></div>
+              <div className="w-full h-full flex justify-between items-center">
+                <div className="relative">
+                  <button
+                    className="p-3 justify-center items-center rounded-none hover:bg-neutral-800/10"
+                    title="Change Theme"
+                    aria-label="Change Color Theme"
+                  >
+                    <SunIcon width="24" height="24" />
+                  </button>
+                </div>
+              </div>
             </footer>
           </div>
         </div>
