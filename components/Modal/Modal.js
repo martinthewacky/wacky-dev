@@ -11,7 +11,7 @@ const Modal = (props) => {
           onClick={props.closeFunc}
         ></div>
         <div className="w-full max-w-lg p-3 flex justify-center items-center relative">
-          <div className="absolute -top-12 right-3">
+          <div className="px-3 absolute bottom-full right-0">
             <button
               className="p-4 flex justify-center items-center rounded-xl text-white hover:bg-neutral-800/50"
               title="Close Modal"
@@ -20,7 +20,9 @@ const Modal = (props) => {
               <XIcon width="24" height="24" />
             </button>
           </div>
-          <div className="w-full py-5 px-3 rounded-xl border border-neutral-400 bg-white"></div>
+          <div className="w-full py-5 px-3 rounded-xl border border-neutral-400 bg-white">
+            {props.children}
+          </div>
         </div>
       </div>
       <style jsx>{`
