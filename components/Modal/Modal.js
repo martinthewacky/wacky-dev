@@ -11,11 +11,11 @@ const Modal = (props) => {
           onClick={props.closeFunc}
         ></div>
         <div className="w-full h-full max-w-xs absolute top-0 right-0">
-          <div className="w-full h-full rounded-none border-l bg-white">
-            <header className="w-full h-12 px-3 border-b">
+          <div className="w-full h-full rounded-none border-l bg-white relative">
+            <header className="w-full h-12 px-3 border-b absolute top-0">
               <div className="w-full h-full flex justify-between items-center">
                 <h5 className="capitalize font-mono text-xl font-bold">
-                  {props.modalHeading}
+                  nav menu
                 </h5>
                 <div className="relative">
                   <button
@@ -29,17 +29,10 @@ const Modal = (props) => {
                 </div>
               </div>
             </header>
-            <div className="p-2 absolute top-0 right-0">
-              <button
-                className="p-4 flex justify-center items-center gap-1 rounded-xl text-neutral-800 hover:bg-neutral-800/10"
-                title="Close Modal"
-                onClick={props.closeFunc}
-              >
-                <XIcon width="24" height="24" />
-                <span className="">Close</span>
-              </button>
-            </div>
-            {props.children}
+            <main className="w-full h-full px-3 py-12">{props.children}</main>
+            <footer className="w-full h-12 px-3 border-t absolute bottom-0">
+              <div className="w-full h-full flex justify-between items-center"></div>
+            </footer>
           </div>
         </div>
       </div>
