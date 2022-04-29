@@ -57,7 +57,6 @@ const Layout = ({ children, home }) => {
       <style global jsx>{`
         * {
           transition: 0.4s ease;
-          box-sizing: border-box;
         }
       `}</style>
     </div>
