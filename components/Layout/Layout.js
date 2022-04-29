@@ -44,6 +44,8 @@ const Layout = ({ children, home }) => {
           <div className="relative">
             <button
               className={`p-3 ${navMenuActive} justify-center items-center rounded-none hover:bg-neutral-800/10`}
+              title="Open Nav Menu"
+              aria-label="Open Navigation Menu"
               onClick={showNavMenu}
             >
               <MenuAlt4Icon width="24" height="24" />
