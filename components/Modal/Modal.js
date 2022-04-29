@@ -3,6 +3,7 @@ import XIcon from "@heroicons/react/outline/XIcon";
 const Modal = (props) => {
   let displayMethod = props.show ? "" : "hidden";
   let animation = props.show ? "animate-fade-in" : "animate-fade-out";
+  let modalAnimation = props.show ? "animate-slide-in" : "";
   return (
     <div className={`${displayMethod} ${animation} absolute top-full w-full`}>
       <div className="fixed inset-0 flex justify-center items-center">
@@ -10,7 +11,9 @@ const Modal = (props) => {
           className="w-full h-full bg-neutral-800/80 absolute"
           onClick={props.closeFunc}
         ></div>
-        <div className="w-full h-full max-w-xs absolute top-0 right-0">
+        <div
+          className={`w-full h-full max-w-xs absolute top-0 right-0 ${modalAnimation}`}
+        >
           <div className="w-full h-full rounded-none border-l bg-white relative">
             <header className="w-full h-12 px-3 border-b absolute top-0">
               <div className="w-full h-full flex justify-between items-center">
@@ -53,11 +56,23 @@ const Modal = (props) => {
             opacity: 0;
           }
         }
+        @keyframes slideIn {
+          from {
+            transform: translateX(100%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+
         .animate-fade-in {
           animation: fadeIn 0.2s ease;
         }
         .animate-fade-out {
           animation: fadeOut 0.4s ease;
+        }
+        .animate-slide-in {
+          animation: slideIn 0.2s ease;
         }
       `}</style>
     </div>
