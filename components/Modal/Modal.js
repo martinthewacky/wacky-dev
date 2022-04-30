@@ -45,6 +45,18 @@ const Modal = (props) => {
                     <SunIcon width="24" height="24" />
                   </button>
                 </div>
+                <div className="relative">
+                  <a
+                    href="https://github.com/martinthewacky/wacky-dev/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="p-3 justify-center items-center rounded-none decoration-dotted decoration-gray-800/50 hover:bg-neutral-800/10 hover:decoration-gray-800/100"
+                    title="Visit GitHub Repo"
+                    aria-label="Visit this project's GitHub repository"
+                  >
+                    GitHub
+                  </a>
+                </div>
               </div>
             </footer>
           </div>
