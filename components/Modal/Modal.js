@@ -1,5 +1,6 @@
 import XIcon from "@heroicons/react/outline/XIcon";
 import SunIcon from "@heroicons/react/outline/SunIcon";
+import NavElements from "./NavElements";
 
 const Modal = (props) => {
   let displayMethod = props.show ? "" : "hidden";
@@ -15,7 +16,7 @@ const Modal = (props) => {
         <div
           className={`w-full h-full max-w-xs absolute top-0 right-0 ${modalAnimation}`}
         >
-          <div className="w-full h-full rounded-none border-l bg-white/80 backdrop-blur-sm relative">
+          <div className="w-full h-full rounded-none border-l bg-white backdrop-blur-sm relative">
             <header className="w-full h-12 px-3 border-b absolute top-0">
               <div className="w-full h-full flex justify-between items-center">
                 <h5 className="capitalize font-mono text-xl font-bold">
@@ -33,7 +34,11 @@ const Modal = (props) => {
                 </div>
               </div>
             </header>
-            <main className="w-full h-full px-3 py-12">{props.children}</main>
+            <main className="w-full h-full px-3 py-12">
+              <div className="w-full h-full py-3">
+                <NavElements />
+              </div>
+            </main>
             <footer className="w-full h-12 px-3 border-t absolute bottom-0">
               <div className="w-full h-full flex justify-between items-center">
                 <div className="relative">
